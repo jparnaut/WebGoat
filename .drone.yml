@@ -5,7 +5,5 @@ steps:
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
-        sonar_host:
-          from_secret: http://35.188.205.135:9000/
-        sonar_token:
-          from_secret: 77ff9470d9e983100b9b4fa10f119b6b0670e158
+        sonar_host: http://35.188.205.135:9000/
+        sonar_token: 77ff9470d9e983100b9b4fa10f119b6b0670e158
