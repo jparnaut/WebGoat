@@ -4,6 +4,8 @@ name: webgoat
 steps:
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
+    commands:
+      - mvn sonar:sonar -Dsonar.projectKey=webGoat -Dsonar.host.url=http://35.188.205.135:9000 -Dsonar.login=ddcfe0e09800d294563d0f53f23c7beb2fbe438f
     settings:
         sonar_host: http://35.188.205.135:9000/
         sonar_token: ddcfe0e09800d294563d0f53f23c7beb2fbe438f
