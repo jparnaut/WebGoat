@@ -8,4 +8,4 @@ steps:
       sonar_host: http://35.188.205.135:9000/
       sonar_token: ddcfe0e09800d294563d0f53f23c7beb2fbe438f
     commands:
-      - sonar-scanner -Dsonar.projectKey=Neptune:news -Dsonar.sources=. -Dsonar.projectName=WebGoat -Dsonar.projectVersion=1.0 -Dsonar.host.url=http://35.188.205.135:9000 -Dsonar.login=60878847cea1a31d817f0deee3daa7868c431433
+      - sonar-scanner -Dsonar.projectKey=WebGoat -Dsonar.sources=. -Dsonar.projectName=WebGoat -Dsonar.projectVersion=1.0 -Dsonar.host.url=http://35.188.205.135:9000 -Dsonar.login=ddcfe0e09800d294563d0f53f23c7beb2fbe438f
