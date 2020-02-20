@@ -1,6 +1,7 @@
 kind: pipeline
 name: webgoat
 
+steps:
   - name: code-analysis
     image: aosapps/drone-sonar-plugin
     settings:
