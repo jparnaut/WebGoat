@@ -6,4 +6,18 @@ steps:
     image: aosapps/drone-sonar-plugin
     settings:
         sonar_host: http://35.188.205.135:9000/
-        sonar_token: 77ff9470d9e983100b9b4fa10f119b6b0670e158
+        sonar_token: ddcfe0e09800d294563d0f53f23c7beb2fbe438f
+
+
+  - name: unit tests
+    image: nexus.wfm.talkdeskstg.com:9001/docker-maven-r:latest
+    commands:
+      - mvn sonar:sonar -Dsonar.projectKey=webGoat -Dsonar.host.url=http://35.188.205.135:9000 -Dsonar.login=ddcfe0e09800d294563d0f53f23c7beb2fbe438f
+    environment:
+      MAVEN_OPTS: -Xms512m -Xmx3g
+      REPO_PASSWORD:
+        from_secret: NEXUS_PASSWORD
+      REPO_USERNAME:
+        from_secret: NEXUS_USER
+      SONARQUBE_TOKEN:
+        from_secret: SONARQUBE_TOKEN
